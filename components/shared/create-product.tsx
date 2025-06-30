@@ -186,10 +186,6 @@ export const CreateProduct = () => {
                                         <FormLabel>Каталог</FormLabel>
                                         <Select
                                             value={String(field.value)}
-                                            onValueChange={(value) => {
-                                                const numValue = Number(value)
-                                                field.onChange(numValue)
-                                            }}
                                         >
                                             <FormControl>
                                                 <SelectTrigger>
