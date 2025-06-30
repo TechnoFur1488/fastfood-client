@@ -40,7 +40,7 @@ interface Cart {
 export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000",
+        baseUrl: "https://fastfood-server-production.up.railway.app/",
         credentials: "include"
     }),
     tagTypes: ["Product", "Catalog", "Cart", "User", "Order"],
