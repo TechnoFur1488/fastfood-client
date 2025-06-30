@@ -27,6 +27,7 @@ export default async function AdminPanelPage() {
             // notFound()
             <div>
                 не админ
+                {"роль:" + role}
             </div>
         );
     }
