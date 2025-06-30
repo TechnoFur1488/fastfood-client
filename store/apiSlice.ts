@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { string } from "zod";
 
 interface Auth {
     email: string
@@ -60,6 +61,10 @@ export const apiSlice = createApi({
                 body: user
             }),
             invalidatesTags: ["User"]
+        }),
+        getRole: builder.query<{role: string}, void>({
+            query: () => "/api/user/role",
+            providesTags: ["User"]
         }),
 
         updateProduct: builder.mutation<void, FormData>({
@@ -171,6 +176,7 @@ export const apiSlice = createApi({
 export const {
     useSigninUserMutation,
     useSignupUserMutation,
+    useGetRoleQuery,
 
     useCreateProductMutation,
     useGetProductsPopularQuery,
