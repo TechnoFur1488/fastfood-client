@@ -1,3 +1,5 @@
+"use client"
+
 // import { notFound } from "next/navigation";
 import { Container } from "@/components/shared/container";
 import { AdminPanel } from "@/components/shared/admin-panel";
