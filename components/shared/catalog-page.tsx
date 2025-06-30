@@ -9,11 +9,10 @@ interface Props {
 }
 
 export const CatalogPage = ({ role }: Props) => {
-
-    if (!role) return null
-
     const searchParams = useSearchParams()
     const router = useParams()
+
+    if (!role) return null
 
     const catalogId = router.catalogId
 
