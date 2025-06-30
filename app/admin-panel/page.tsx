@@ -26,6 +26,8 @@ export default async function AdminPanelPage() {
         );
     }
 
+    console.log("TOKEN:", token)
+
     return (
         <Container>
             <AdminPanel />
