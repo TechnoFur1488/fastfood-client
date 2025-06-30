@@ -1,7 +1,6 @@
 import { useGetProductsCatalogQuery } from "@/store/apiSlice"
 import Image from "next/image"
 import { useState } from "react"
-import { Button } from "../ui/button"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { AddCart } from "./add-cart"

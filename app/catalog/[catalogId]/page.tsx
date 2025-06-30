@@ -14,7 +14,7 @@ export default async function PageCatalog() {
             if (typeof decoded === "object" && decoded !== null && "role" in decoded) {
                 role = (decoded as JwtPayload).role as string;
             }
-        } catch (err) {
+        } catch {
             role = null
         }
     }

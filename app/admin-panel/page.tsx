@@ -15,7 +15,7 @@ export default async function AdminPanelPage() {
             if (typeof decoded === "object" && decoded !== null && "role" in decoded) {
                 role = (decoded as JwtPayload).role as string;
             }
-        } catch (err) {
+        } catch {
             role = null
         }
     }

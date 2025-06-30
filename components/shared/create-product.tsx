@@ -16,7 +16,6 @@ import toast from "react-hot-toast"
 
 export const CreateProduct = () => {
     const [postProduct] = useCreateProductMutation()
-    const [selectedCatalogId, setSelectedCatalogId] = useState<number>(0)
     const { data: catalogs } = useGetCatalogQuery()
     const [previewUrl, setPreviewUrl] = useState<string>("")
 
@@ -190,7 +189,6 @@ export const CreateProduct = () => {
                                             onValueChange={(value) => {
                                                 const numValue = Number(value)
                                                 field.onChange(numValue)
-                                                setSelectedCatalogId(numValue)
                                             }}
                                         >
                                             <FormControl>

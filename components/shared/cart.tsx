@@ -1,7 +1,6 @@
 import { useGetCartQuery } from "@/store/apiSlice"
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet"
 import Image from "next/image"
-import { Button } from "../ui/button"
 import { CartUpdate } from "./cart-update"
 import { ScrollArea } from "../ui/scroll-area"
 import { CartDelete } from "./cart-delete"

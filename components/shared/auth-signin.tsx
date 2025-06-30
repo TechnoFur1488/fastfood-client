@@ -1,6 +1,6 @@
 "use client"
 
-import { useSigninUserMutation, useSignupUserMutation } from "@/store/apiSlice"
+import { useSigninUserMutation } from "@/store/apiSlice"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { z } from "zod"

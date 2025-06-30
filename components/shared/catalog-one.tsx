@@ -29,7 +29,7 @@ export const CatalogOne = ({ catalogId, role }: Props) => {
             await deleteCatalog(catalogId).unwrap()
             toast.success("Каталог успешно удален")
         } catch (err) {
-            console.error
+            console.error(err)
         }
     }
 
@@ -38,7 +38,7 @@ export const CatalogOne = ({ catalogId, role }: Props) => {
             await updateCatalog({ id: catalogId, name: editInput }).unwrap()
             toast.success("Каталог успешно обновлен")
         } catch (err) {
-            console.error
+            console.error(err)
         }
     }
 
