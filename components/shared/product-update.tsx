@@ -209,8 +209,7 @@ export const ProductUpdate = ({
                                         <Select
                                             value={String(field.value)}
                                             onValueChange={(value) => {
-                                                const numValue = Number(value)
-                                                field.onChange(numValue)
+                                                field.onChange(Number(value))
                                             }}
                                         >
                                             <FormControl>
