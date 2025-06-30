@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Container } from "./container"
-import Image from "next/image"
 import { Button } from "../ui/button"
 import { useState } from "react"
 import { Catalog } from "./catalog"

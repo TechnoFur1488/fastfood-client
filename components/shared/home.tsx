@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import { Navigation } from 'swiper/modules';
 import { Button } from '../ui/button';
 import { ProductsPopular } from './products-popular';
 import { ProductsNew } from './products-new';

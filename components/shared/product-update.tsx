@@ -66,7 +66,7 @@ export const ProductUpdate = ({
         }
     })
 
-    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>, field: any) => {
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>, field: { onChange: (file: File) => void }) => {
         if (e.target.files && e.target.files[0]) {
             const file = e.target.files[0]
             field.onChange(file)
