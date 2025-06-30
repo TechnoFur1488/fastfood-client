@@ -22,11 +22,14 @@ export default async function AdminPanelPage() {
     
     console.log("TOKEN:", token)
 
-    // if (role !== "ADMIN") {
-    //     return (
-    //         notFound()
-    //     );
-    // }
+    if (role !== "ADMIN") {
+        return (
+            // notFound()
+            <div>
+                не админ
+            </div>
+        );
+    }
 
 
     return (
