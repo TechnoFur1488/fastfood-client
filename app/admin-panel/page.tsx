@@ -19,6 +19,8 @@ export default async function AdminPanelPage() {
             role = null
         }
     }
+    
+    console.log("TOKEN:", token)
 
     if (role !== "ADMIN") {
         return (
@@ -26,7 +28,6 @@ export default async function AdminPanelPage() {
         );
     }
 
-    console.log("TOKEN:", token)
 
     return (
         <Container>
