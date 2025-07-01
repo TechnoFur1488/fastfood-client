@@ -120,7 +120,7 @@ export const apiSlice = createApi({
             providesTags: ["Catalog"]
         }),
         getOneCatalog: builder.query<{ catalog: Catalog }, number>({
-            query: (id) => `/api/catalog/${id}`,
+            query: (id) => `/api/catalog/${id}`, 
             providesTags: ["Catalog"]
         }),
         getProductsCatalog: builder.query<{ product: { count: number, rows: Product[] } }, { id: number, page: number }>({
