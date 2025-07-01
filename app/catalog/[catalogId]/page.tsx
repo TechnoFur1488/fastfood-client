@@ -4,7 +4,7 @@ import { CatalogPage } from "@/components/shared/catalog-page";
 import { Container } from "@/components/shared/container";
 import { useGetRoleQuery } from "@/store/apiSlice";
 
-export default async function PageCatalog() {
+export default function PageCatalog() {
     const { data } = useGetRoleQuery()
 
     if (data?.role !== "ADMIN") {
