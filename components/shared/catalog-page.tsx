@@ -5,7 +5,7 @@ import { CatalogOne } from "./catalog-one"
 import { CatalogProducts } from "./catalog-products"
 
 interface Props {
-    role: string | null
+    role: string | undefined
 }
 
 export const CatalogPage = ({ role }: Props) => {
