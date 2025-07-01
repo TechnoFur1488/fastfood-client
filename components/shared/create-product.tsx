@@ -17,6 +17,7 @@ import toast from "react-hot-toast"
 export const CreateProduct = () => {
     const [postProduct] = useCreateProductMutation()
     const { data: catalogs } = useGetCatalogQuery()
+    const [selectedCatalogId, setSelectedCatalogId] = useState<number>(0)
     const [previewUrl, setPreviewUrl] = useState<string>("")
 
     const formSchema = z.object({
@@ -187,6 +188,11 @@ export const CreateProduct = () => {
                                         <FormLabel>Каталог</FormLabel>
                                         <Select
                                             value={String(field.value)}
+                                            onValueChange={(value) => {
+                                                const numValue = Number(value)
+                                                field.onChange(numValue)
+                                                setSelectedCatalogId(numValue)
+                                            }}
                                         >
                                             <FormControl>
                                                 <SelectTrigger>
