@@ -60,7 +60,7 @@ export const CreateProduct = () => {
             formData.append("name", data.name)
             formData.append("price", String(data.price))
             formData.append("discount", String(data.discount))
-            formData.append("catalogId", String(data.catalogId))
+            formData.append("catalogId", String(selectedCatalogId))
             formData.append("description", data.description)
 
             await postProduct(formData).unwrap()
