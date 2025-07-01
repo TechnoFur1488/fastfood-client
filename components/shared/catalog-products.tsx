@@ -29,7 +29,7 @@ export const CatalogProducts = ({ catalogId, page }: Props) => {
         pages.push(i + 1)
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_APP_API_URL || "http://localhost:5000/"
+    const baseUrl = process.env.NEXT_PUBLIC_APP_API_URL || "https://fastfood-server-production.up.railway.app/"
 
     return (
         <>

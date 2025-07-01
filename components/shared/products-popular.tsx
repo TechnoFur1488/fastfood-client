@@ -8,7 +8,7 @@ export const ProductsPopular = () => {
     if (isLoading) return <div>Загрузка...</div>
     if (isError) return <div>Ошибка</div>
 
-    const baseUrl = process.env.NEXT_PUBLIC_APP_API_URL || "http://localhost:5000/"
+    const baseUrl = process.env.NEXT_PUBLIC_APP_API_URL || "https://fastfood-server-production.up.railway.app/"
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
