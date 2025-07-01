@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     domains: [
-      "localhost",
+      "fastfood-server-production.up.railway.app",
     ]
   }
 };
