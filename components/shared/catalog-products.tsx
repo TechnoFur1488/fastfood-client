@@ -13,7 +13,7 @@ interface Props {
     role: string
 }
 
-export const CatalogProducts = ({ catalogId, page }: Props) => {
+export const CatalogProducts = ({ catalogId, page, role }: Props) => {
     const [state, setState] = useState(Number(page))
     const { data, isLoading, isError } = useGetProductsCatalogQuery({ id: catalogId, page: state })
 
@@ -54,10 +54,12 @@ export const CatalogProducts = ({ catalogId, page }: Props) => {
                             }
                         </div>
                         <AddCart productId={el.id} />
-                        <div className={"absolute top-0"}>
-                            <DeleteProduct productId={el.id} />
-                            <ProductUpdate productId={el.id} name={el.name} description={el.description} price={el.price} discount={el.discount} catalogId={el.catalogId} img={baseUrl + el.img} />
-                        </div>
+                        {role === "ADMIN" &&
+                            <div className={"absolute top-0"}>
+                                <DeleteProduct productId={el.id} />
+                                <ProductUpdate productId={el.id} name={el.name} description={el.description} price={el.price} discount={el.discount} catalogId={el.catalogId} img={baseUrl + el.img} />
+                            </div>
+                        }
                     </div>
                 ))}
             </div>
